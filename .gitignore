@@ -57,6 +57,5 @@ _minted-*/
 .DS_Store
 Thumbs.db
 
-# ---------- Allow tracking referenced PDFs ----------
-# If you have figures or external PDFs you do want to track, un-ignore them, e.g.:
-# !paper/figures/*.pdf
+# ---------- Allow tracking the built report ----------
+!paper/report.pdf
