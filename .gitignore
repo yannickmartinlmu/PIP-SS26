@@ -1,0 +1,62 @@
+# ---------- LaTeX build artifacts ----------
+# Compiled output
+*.pdf
+*.dvi
+*.ps
+*.xdv
+
+# Auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.ist
+*.lol
+*.thm
+
+# Beamer / overlays
+*.nav
+*.snm
+*.vrb
+
+# minted / pygments
+_minted-*/
+*.pyg
+
+# latexmk
+*.fdb_latexmk
+*.fls
+
+# ---------- Editor / OS ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ---------- Allow tracking referenced PDFs ----------
+# If you have figures or external PDFs you do want to track, un-ignore them, e.g.:
+# !paper/figures/*.pdf

@@ -1,0 +1,33 @@
+name: Build LaTeX PDF
+
+on:
+  push:
+    paths:
+      - 'paper/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX documents
+        working-directory: paper
+        run: |
+          shopt -s nullglob
+          for tex in *.tex; do
+            echo "Compiling $tex"
+            latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error "$tex"
+          done
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdfs
+          path: paper/*.pdf
+          if-no-files-found: error
