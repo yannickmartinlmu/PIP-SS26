@@ -1,0 +1,1 @@
+roll_die(N) :- random_between(1, 6, N).
