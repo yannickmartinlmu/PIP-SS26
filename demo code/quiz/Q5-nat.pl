@@ -1,2 +1,2 @@
 nat(0).
-nat(N) :- nat(M), N is M + 1.
+nat(N) :- M is N - 1, nat(M).
