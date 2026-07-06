@@ -1,8 +1,5 @@
-% Fibonacci: tabling is a perfect fit (pure, no side-effects) 
-:- table fibonacci/2.
-
-fibonacci(0, 1).
-fibonacci(1, 1).
+fibonacci(0, 1) :- !.
+fibonacci(1, 1) :- !.
 fibonacci(N, F) :-
     N > 1,
     N1 is N - 1,
@@ -10,5 +7,3 @@ fibonacci(N, F) :-
     fibonacci(N1, F1),
     fibonacci(N2, F2),
     F is F1 + F2.
-
-
